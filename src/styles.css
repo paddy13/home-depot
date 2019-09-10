@@ -1,0 +1,13 @@
+#main-container {
+    width: 35%;
+    margin: auto;
+    border: 1px solid;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+#disclaimer {
+    text-decoration: underline;
+    text-align: right;
+    color: blue;
+}

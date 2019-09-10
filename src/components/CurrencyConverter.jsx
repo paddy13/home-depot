@@ -42,16 +42,16 @@ class CurrencyConverter extends React.Component {
 
     render() {
         return (
-            <div>
-                Currency Converter<br />
-                Type in amount and select currency:<br />
+            <div id='main-container'>
+                <p>Currency Converter</p>
+                <p>Type in amount and select currency:</p>
                 <InputAndCurrencyMenu 
                     inputType='number'
                     inputValue={this.state.amount}
                     inputChange={this.handleBaseAmtChange}
                     selectChange={event => this.setState({ baseCurrency: event.target.value })}
                     selectValue={this.state.baseCurrency}
-                /><br />
+                />
                 <InputAndCurrencyMenu 
                     inputType='number'
                     inputValue={this.state.convertedAmount}
@@ -59,6 +59,7 @@ class CurrencyConverter extends React.Component {
                     selectChange={event => this.setState({ targetCurrency: event.target.value })}
                     selectValue={this.state.targetCurrency}
                 />
+                <div id='disclaimer'> Disclaimer </div>
             </div>
         );
     }
