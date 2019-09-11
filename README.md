@@ -1,21 +1,26 @@
-## Follow these steps to run this project
+# CURRENCY CONVERTER
 
-Open Terminal and clone this repository.<br>
+### Open Terminal and run following commands to clone this repo<br>
 
-```git clone https://github.com/paddy13/home-depot.git```
+```
+1. git clone https://github.com/paddy13/home-depot.git
 
-Move in to project directory.<br>
-```cd home-depot```
+2. cd home-depot
+```
 
-Then run following command to install all the dependencies.<br>
+### To run the project, run following commands!<br>
 
-### `npm install`
+```
+1. yarn install
 
-Then<br>
+2. yarn run start
+```
 
-### `npm start`
+Open [http://localhost:3000](http://localhost:3000) to view it in the browser!!<br>
 
-Runs the app in the development mode.<br>
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.<br>
-
-The page will reload if you make edits.<br>
+### Basic requirement for the project
+```
+    "react": "^16.9.0",
+    "axios": "^0.19.0",
+    "node-sass": "^4.12.0",
+```
