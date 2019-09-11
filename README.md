@@ -16,7 +16,8 @@
 2. yarn run start
 ```
 
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser!!<br>
+These commands will install all the dependencies. <br>
+After that, open [http://localhost:3000](http://localhost:3000) to view it in the browser!!<br>
 
 ### Basic requirement for the project
 ```
