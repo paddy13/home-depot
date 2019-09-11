@@ -25,3 +25,7 @@ After that, open [http://localhost:3000](http://localhost:3000) to view it in th
     "axios": "^0.19.0",
     "node-sass": "^4.12.0",
 ```
+
+### TODO (In next version)
+- [] Vice-versa effect: Inserting value in converted input box or changing the currency in options, will change the value of base amount.
+- [] Restricting user to convert same currency
