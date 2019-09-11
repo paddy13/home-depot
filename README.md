@@ -2,7 +2,11 @@
 
 Open Terminal and clone this repository.<br>
 
+<<<<<<< HEAD
 ```git clone https://github.com/paddy13/home-depot.git```
+=======
+```In the project directory, you can run:```
+>>>>>>> 235129dd15369eaaee99a07d08200a318ef805a8
 
 Move in to project directory.<br>
 ```cd home-depot```
