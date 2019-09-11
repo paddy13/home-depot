@@ -2,7 +2,7 @@ import React from "react";
 import axios from "axios";
 import Currencies from "../data/currencies";
 
-import InputAndCurrencyMenu from "../utils/InputAndCurrencyMenu";
+import CurrencyInputGroup from "../utils/CurrencyInputGroup";
 
 class CurrencyConverter extends React.Component {
     constructor(props) {
@@ -12,7 +12,8 @@ class CurrencyConverter extends React.Component {
             amount: 1,
             convertedAmount: 0,
             baseCurrency: 'EUR',
-            targetCurrency: 'CAD'
+            targetCurrency: 'CAD',
+            displayRates: false
         }
     }
 
@@ -45,21 +46,39 @@ class CurrencyConverter extends React.Component {
             <div id='main-container'>
                 <p>Currency Converter</p>
                 <p>Type in amount and select currency:</p>
-                <InputAndCurrencyMenu 
-                    inputType='number'
-                    inputValue={this.state.amount}
-                    inputChange={this.handleBaseAmtChange}
-                    selectChange={event => this.setState({ baseCurrency: event.target.value })}
-                    selectValue={this.state.baseCurrency}
-                />
-                <InputAndCurrencyMenu 
-                    inputType='number'
-                    inputValue={this.state.convertedAmount}
-                    inputChange={event => this.setState({ convertedAmount: event.target.value })}
-                    selectChange={event => this.setState({ targetCurrency: event.target.value })}
-                    selectValue={this.state.targetCurrency}
-                />
-                <div id='disclaimer'> Disclaimer </div>
+                <div className='inputCurrency'>
+                    <CurrencyInputGroup
+                        inputType='number'
+                        inputValue={this.state.amount}
+                        inputChange={this.handleBaseAmtChange}
+                        selectChange={event => this.setState({ baseCurrency: event.target.value })}
+                        selectValue={this.state.baseCurrency}
+                    />
+                </div>
+                <div className='inputCurrency'>
+                    <CurrencyInputGroup
+                        inputType='number'
+                        inputValue={this.state.convertedAmount}
+                        inputChange={event => this.setState({ convertedAmount: event.target.value })}
+                        selectChange={event => this.setState({ targetCurrency: event.target.value })}
+                        selectValue={this.state.targetCurrency}
+                    />
+                </div>
+                <div className='disclaimer' onClick={() => this.setState({ displayRates: !this.state.displayRates })}> Disclaimer </div>
+                {
+                    this.state.displayRates && <h4>Rates of currencies per {this.state.baseCurrency}</h4>
+                }
+                {
+                    this.state.displayRates && (
+                        Object.values(this.state.rates).map((rate, i) => {
+                            if (Currencies[i] === this.state.baseCurrency) {
+                                return '';
+                            }
+                            const newRate = rate/this.state.rates[this.state.baseCurrency];
+                            return <li key={rate}>{Currencies[i]}: {newRate.toFixed(2)}</li>
+                        })
+                    )
+                }
             </div>
         );
     }

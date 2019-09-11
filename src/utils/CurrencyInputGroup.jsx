@@ -1,7 +1,7 @@
 import React from "react";
 import Currencies from "../data/currencies";
 
-function InputAndCurrencyMenu(props) {
+function CurrencyInputGroup(props) {
     return (
         <div>
             <input 
@@ -21,4 +21,4 @@ function InputAndCurrencyMenu(props) {
     )
 }
 
-export default InputAndCurrencyMenu;
+export default CurrencyInputGroup;

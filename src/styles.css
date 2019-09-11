@@ -1,13 +1,23 @@
 #main-container {
-    width: 35%;
+    width: 20%;
     margin: auto;
     border: 1px solid;
     border-radius: 5px;
     padding: 10px;
 }
 
-#disclaimer {
+.disclaimer {
     text-decoration: underline;
     text-align: right;
     color: blue;
+}
+
+input[type=number] {
+    padding: 12px;
+    margin: 0px 20px 10px 0px;
+}
+
+.inputCurrency select {
+    width: 30%;
+    height: 40px;
 }
