@@ -14,7 +14,7 @@ class CurrencyConverter extends React.Component {
     /* 
     * @function constructor
     * @params props
-    * Also, we initialize default state values here
+    * Also, initialized default state values here
     */
     constructor(props) {
         super(props);
